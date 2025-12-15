@@ -15,14 +15,14 @@
     "BOT_NAME": {
       "description": "Type here the bot name.",
       "required": false,
-      "value": "ARSLAN-MD"
+      "value": "𝐐𝐚𝐝𝐞𝐞𝐫-𝐗𝐃"
 
       }, 
     
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "923237045919"
+      "value": "𝟗𝟐𝟑𝟑𝟎𝟎𝟎𝟎𝟓𝟐𝟓𝟑"
 
     }, 
     
