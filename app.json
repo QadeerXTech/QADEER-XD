@@ -3,6 +3,29 @@
   "description": "WhatsApp bot using Baileys and creds.json session.",
   "repository": "https://github.com/QadeerXTech/QADEER-XD",
   "keywords": ["whatsapp", "bot", "baileys", "Qadeer-XD", "arslan-ai"],
+      
+  "stack": "container",
+  "settings": {
+    "SESSION_ID": {
+      "description": "Put the session-id here.",
+      "required": true,
+      "value": ""
+    },  
+
+    "BOT_NAME": {
+      "description": "Type here the bot name.",
+      "required": false,
+      "value": "ARSLAN-MD"
+
+      }, 
+    
+    "OWNER_NUMBER": {
+      "description": "put the owner number for bot.",
+      "required": false,
+      "value": "923237045919"
+
+    }, 
+    
   "buildpacks": [
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
