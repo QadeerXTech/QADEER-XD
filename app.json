@@ -13,7 +13,7 @@
   "scripts": {
     "start": "node index.js"
   },
-"env": {
+"settings": {
   "SESSION_ID": {
     "description": "Must begin with 'QADEER-XD~.",
     "value": "",
