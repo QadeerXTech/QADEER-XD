@@ -1,42 +1,37 @@
 {
-  "name": "Qadeer-XD",
-  "description": "WhatsApp bot using Baileys and creds.json session.",
+  "name": "QADEER-XD",
+  "description": "Qadeer-XD, your friendly assistant!",
+  "logo": "https://files.catbox.moe/4lfjfn.jpg",
+  "keywords": [],
   "repository": "https://github.com/QadeerXTech/QADEER-XD",
-  "keywords": ["whatsapp", "bot", "baileys", "Qadeer-XD", "arslan-ai"],
-  "success_url": "/",
-  
   "stack": "container",
-  "settings": {
-    "SESSION_ID": {
-      "description": "Put the session-id here.",
-      "required": true,
-      "value": ""
-    },  
-
-    "BOT_NAME": {
-      "description": "Type here the bot name.",
-      "required": false,
-      "value": "𝐐𝐚𝐝𝐞𝐞𝐫-𝐗𝐃"
-
-      }, 
-    
-    "OWNER_NUMBER": {
-      "description": "put the owner number for bot.",
-      "required": false,
-      "value": "𝟗𝟐𝟑𝟑𝟎𝟎𝟎𝟎𝟓𝟐𝟓𝟑"
-    }
-
-    }, 
-    
-  "buildpacks": [
+  "addons": [
     {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    },
-    {
-      "url": "heroku/nodejs"
+      "plan": "heroku-postgresql"
     }
   ],
   "scripts": {
-    "postdeploy": "echo '✅ Qadeer-XD deployed on Heroku!'"
+    "start": "node index.js"
+  },
+"env": {
+  "SESSION_ID": {
+    "description": "Must begin with 'QADEER-XD~.",
+    "value": "",
+    "required": false
   }
+},
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
 }
