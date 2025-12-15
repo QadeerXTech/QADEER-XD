@@ -13,13 +13,13 @@
   "scripts": {
     "start": "node index.js"
   },
-"env": {
-  "SESSION_ID": {
-    "description": "Must begin with 'QADEER-XD~.",
-    "value": "",
-    "required": false
-  }
-},
+  "env": {
+    "SESSION_ID": {
+      "description": "Must begin with 'QADEER-XD~.'",
+      "value": "",
+      "required": false
+    }
+  },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
