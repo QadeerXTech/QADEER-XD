@@ -1,0 +1,17 @@
+{
+  "name": "Qadeer-XD",
+  "description": "WhatsApp bot using Baileys and creds.json session.",
+  "repository": "https://github.com/QadeerXTech/QADEER-XD",
+  "keywords": ["whatsapp", "bot", "baileys", "Qadeer-XD", "arslan-ai"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "echo '✅ Qadeer-XD deployed on Heroku!'"
+  }
+}
