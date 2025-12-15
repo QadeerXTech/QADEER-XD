@@ -3,7 +3,7 @@
   "description": "WhatsApp bot using Baileys and creds.json session.",
   "repository": "https://github.com/QadeerXTech/QADEER-XD",
   "keywords": ["whatsapp", "bot", "baileys", "Qadeer-XD", "arslan-ai"],
-      
+  "success_url": "/",
   "stack": "container",
   "settings": {
     "SESSION_ID": {
@@ -23,6 +23,7 @@
       "description": "put the owner number for bot.",
       "required": false,
       "value": "𝟗𝟐𝟑𝟑𝟎𝟎𝟎𝟎𝟓𝟐𝟓𝟑"
+    }
 
     }, 
     
