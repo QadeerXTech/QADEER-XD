@@ -1,16 +1,17 @@
-FROM node:lts-buster
-USER root
+FROM node:18-bullseye
+
+WORKDIR /app
+
 RUN apt-get update && \
-    apt-get install -y ffmpeg webp git && \
-    apt-get upgrade -y && \
+    apt-get install -y ffmpeg webp && \
     rm -rf /var/lib/apt/lists/*
-USER node
-RUN git clone https://github.com/QadeerXTech/DJ /home/node/DJ
-WORKDIR /home/node/DJ
-RUN chmod -R 777 /home/node/DJ/
-RUN yarn install --network-concurrency 1
-EXPOSE 7860
+
+COPY package.json yarn.lock* ./
+
+RUN npm install -g yarn && yarn install --network-concurrency 1
+
+COPY . .
+
 ENV NODE_ENV=production
+
 CMD ["npm", "start"]
-
-
