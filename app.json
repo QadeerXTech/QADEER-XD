@@ -1,37 +1,29 @@
 {
   "name": "QADEER-XD",
-  "description": "Qadeer-XD, your friendly assistant!",
-  "logo": "https://files.catbox.moe/4lfjfn.jpg",
-  "keywords": [],
+  "description": "WhatsApp Bot based on Baileys",
   "repository": "https://github.com/QadeerXTech/QADEER-XD",
-  "stack": "container",
-  "addons": [
-    {
-      "plan": "heroku-postgresql"
-    }
-  ],
-  "scripts": {
-    "start": "node index.js"
-  },
+  "logo": "https://files.catbox.moe/4lfjfn.jpg",
+  "keywords": ["whatsapp", "bot", "baileys", "qadeer-xd"],
   "env": {
     "SESSION_ID": {
-      "description": "Must begin with 'QADEER-XD~.'",
-      "value": "",
-      "required": false
+      "description": "Paste your WhatsApp SESSION ID here (QADEER-XD~xxxx)",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
     }
   },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
     }
-  ]
+  ],
+  "stack": "heroku-22"
 }
